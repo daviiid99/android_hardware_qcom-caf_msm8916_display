@@ -2,10 +2,10 @@ LOCAL_PATH:= $(call my-dir)
 include $(LOCAL_PATH)/../common.mk
 include $(CLEAR_VARS)
 
-LOCAL_COPY_HEADERS_TO         := $(common_header_export_path)
-LOCAL_COPY_HEADERS            := color_metadata.h
+LOCAL_EXPORT_C_INCLUDE_DIRS_TO         := $(common_header_export_path)
+LOCAL_EXPORT_C_INCLUDE_DIRS            := color_metadata.h
 
-include $(BUILD_COPY_HEADERS)
+include $(BUILD_LOCAL_EXPORT_C_INCLUDE_DIRS)
 
 include $(CLEAR_VARS)
 #TODO move all exported headers to this directory
